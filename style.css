@@ -1,0 +1,259 @@
+:root {
+  --lm-bg: #f6f8ff;
+  --lm-bg-content: #fefefe;
+  --lm-text: #4b6a9b;
+  --lm-text-alt: #2b3442;
+  --lm-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+  --lm-shadow-inactive: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
+  --lm-icon-bg: brightness(100%);
+  /* Btn */
+  --btn: #0079ff;
+  --btn-hover: #60abff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--lm-bg);
+  color: var(--lm-text);
+  position: relative;
+  font-size: 13px;
+}
+
+.container {
+  width: 580px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.devdetective-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.themeBtn {
+  display: flex;
+  letter-spacing: 2.5px;
+  width: 90px;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  color: var(--lm-text);
+  cursor: pointer;
+}
+
+.themeBtn p {
+  text-transform: uppercase;
+}
+
+.search-container {
+  position: relative;
+  background: var(--lm-bg-content);
+  height: 100%;
+  padding: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-position-x: 24px;
+  background-position-y: center;
+  background-size: 20px;
+  border-radius: 15px;
+  box-shadow: var(--lm-shadow);
+}
+
+.input {
+  border: none;
+  outline: none;
+  width: 80%;
+  height: 47px;
+  color: var(--lm-text);
+  padding-left: 15px;
+  background: none;
+}
+
+.input::placeholder {
+  color: var(--lm-text);
+  letter-spacing: -0.5px;
+  font-size: 13px;
+}
+
+.searchImage {
+  height: 20px;
+  width: 20px;
+  margin: 8px 1px 8px 10px;
+}
+
+.searchBtn {
+  background: var(--btn);
+  color: #fff;
+  /* outline: none; */
+  border: none;
+  border-radius: 9px;
+  padding: 12px 16px;
+  margin: 4px 4px;
+  font-weight: bold;
+  font-size: 14px;
+  min-width: 84px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  position: relative;
+}
+
+.searchBtn:hover {
+  background-color: var(--btn-hover);
+}
+
+.searchBtn:active {
+  scale: 0.975;
+}
+
+.information-container {
+  background-color: var(--lm-bg-content);
+  border-radius: 15px;
+  box-shadow: var(--lm-shadow);
+  padding: 20px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 130px 395px;
+  scale: 1;
+}
+
+.userImage {
+  width: 100px;
+  border-radius: 90px;
+  margin-left: 8px;
+  margin-top: 5px;
+}
+
+.user-information {
+  display: flex;
+  flex-direction: column;
+  /* align-items: space-around; */
+  gap: 7px;
+}
+
+.user-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--lm-text-alt);
+}
+
+.date-of-joining {
+  font-size: 12px;
+  /* padding: 10px 0px 0px; */
+}
+
+.userLink {
+  color: var(--btn);
+}
+
+.user-experience {
+  line-height: 25px;
+  opacity: 0.75;
+}
+
+.user-githubStatus {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--lm-bg);
+  padding: 18px 28px;
+  border-radius: 10px;
+  margin: 25px 0 25px 0;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.status p {
+  font-size: 11px;
+}
+
+.status a {
+  text-decoration: none;
+  color: var(--lm-text-alt);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.status a:hover {
+  text-decoration: underline;
+}
+
+.user-githubInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  row-gap: 20px;
+  color: var(--lm-text);
+}
+
+.githubInfo {
+  /* width: 50%; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 14px;
+}
+
+.githubInfo img {
+  width: 16px;
+  filter: var(--lm-icon-bg);
+}
+
+.githubInfo p {
+  overflow-wrap: break-word;
+  text-transform: capitalize;
+}
+
+.githubInfo a {
+  color: var(--lm-text);
+  word-break: break-all;
+  text-decoration: none;
+}
+
+.githubInfo a:hover {
+  text-decoration: underline;
+}
+
+.error-container {
+  scale: 0;
+  display: none;
+  /* display: flex; */
+  align-self: center;
+  justify-self: center;
+}
+
+.error-container img {
+  margin-top: 10px;
+  scale: 0.9;
+}
+
+.error-container p {
+  margin-top: 20px;
+  margin-left: -10px;
+}

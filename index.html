@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev-Detective Github</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="Images/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="container">
+
+
+            <div class="devdetective-container">
+                <h1>DevDetective</h1>
+                <div class="themeBtn">
+                    <p data-themeMode>Dark</p>
+                    <img src="Images/moon-icon.svg" data-themeIcon>
+                </div>
+            </div>
+
+            <div class="search-container">
+                <img src="Images/search-icon.svg" class="searchImage">
+                <input type="text" placeholder="Enter a GitHub username..." class="input" data-searchBar>
+                <button class="searchBtn" type="submit" data-searchBtn>Search</button>
+            </div>
+
+            <div class="information-container">
+
+                <img src="" class="userImage" data-userImage>
+
+                <div class="user-information">
+                    <div class="user-name">
+                        <h2 class="name" data-name></h2>
+                        <p class="date-of-joining" data-DOJ></p>
+                    </div>
+
+                    <a target="_blank" class="userLink" data-userLink>@loveBabbar</a>
+
+                    <p class="user-experience" data-userExp></p>
+
+                    <div class="user-githubStatus">
+                        <div class="status">
+                            <p class="repos">Repos</p>
+                            <a target="_blank" href="" class="no-of-repos" data-noOfRepos></a>
+                        </div>
+                        <div class="status">
+                            <p class="followers">Followers</p>
+                            <a target="_blank" href="" class="no-of-followers" data-noOfFollowers></a>
+                        </div>
+                        <div class="status">
+                            <p class="following">Following</p>
+                            <a target="_blank" href="" class="no-of-following" data-noOfFollowing></a>
+                        </div>
+                    </div>
+
+                    <div class="user-githubInfo">
+                        <div class="githubInfo">
+                            <img src="Images/location-icon.svg">
+                            <p data-userLocation></p>
+                        </div>
+                        <div class="githubInfo">
+                            <img src="Images/website-icon.svg">
+                            <a target="_blank" href="" data-userGithubID></a>
+                        </div>
+                        <div class="githubInfo">
+                            <img src="Images/twitter-icon.svg">
+                            <a target="_blank" href="" data-userTwitterID></a>
+                        </div>
+                        <div class="githubInfo">
+                            <img src="Images/company-icon.svg">
+                            <p data-userCompanyName></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Wrong user name case -->
+            <div class="error-container">
+                <img src="Images/android-chrome-192x192.png">
+                <p>Wrong User Name, Try Again!!</p>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
