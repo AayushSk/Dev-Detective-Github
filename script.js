@@ -180,4 +180,4 @@ if (localStorage.getItem("dark-mode") === null) {
     }
 }
 
-fetchUserInfo(url + "AayushSk");
+fetchUserInfo(url + "priyansh70");
